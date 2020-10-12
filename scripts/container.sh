@@ -16,7 +16,7 @@
 
 COMMAND="$1"
 
-export APP_IMAGE_NAME=paulwizviz/goreact:current
+export APP_IMAGE_NAME=openconsentia/goreact:current
 export APP_TEST_CONTAINER_NAME=test_container
 
 function build() {

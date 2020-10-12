@@ -16,14 +16,14 @@
 
 COMMAND="$1"
 
-export REST_TEST_IMAGE=paulwizviz/rest_test_image:current
+export REST_TEST_IMAGE=openconsentia/rest_test_image:current
 
 function restUnit(){
-    docker build -f ./test/unit/rest.dockerfile --build-arg GO_VER=1.13.3 -t ${REST_TEST_IMAGE} .
+    docker build -f ./deployments/unit/rest.dockerfile --build-arg GO_VER=1.13.3 -t ${REST_TEST_IMAGE} .
     docker rmi -f ${REST_TEST_IMAGE}
 }
 
-message="Usage: $0 rest"
+message="Usage: $0 unit"
 
 if [ "$#" -ne 1 ]; then
     echo $message

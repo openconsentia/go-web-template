@@ -15,7 +15,7 @@
 # limitations under the License.
 
 export REST_SERVER_NAME=goreact
-export REACT_IMAGE_NAME=paulwizviz/goweb-dev-react
+export REACT_IMAGE_NAME=openconsentia/goweb-dev-react
 export IMAGE_TAG=dev
 
 COMMAND="$1"
