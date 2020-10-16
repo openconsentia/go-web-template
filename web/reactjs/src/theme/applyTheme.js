@@ -14,13 +14,14 @@
 
 import React from 'react';
 
-import { Routes } from '../Routes';
-import {BlueTheme, applyTheme} from '../theme';
-
-const App = () => {
-    return (
-        <Routes />
-    );
+const applyTheme = (Theme, Component) => {
+    return (props) => {
+        return (
+            <Theme>
+                <Component {...props} />
+            </Theme>
+        );
+    };
 };
 
-export default applyTheme(BlueTheme, App);
+export default applyTheme;

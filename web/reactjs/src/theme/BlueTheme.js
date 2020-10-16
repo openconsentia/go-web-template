@@ -14,13 +14,31 @@
 
 import React from 'react';
 
-import { Routes } from '../Routes';
-import {BlueTheme, applyTheme} from '../theme';
+import PropTypes from 'prop-types';
 
-const App = () => {
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+
+import { blue } from '@material-ui/core/colors';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: blue,
+        type: 'light'
+    },
+    typography: {
+        useNextVariants: true,
+    },
+});
+
+const BlueTheme = (props) => {
+    const { children } = props;
     return (
-        <Routes />
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
     );
 };
 
-export default applyTheme(BlueTheme, App);
+BlueTheme.propTypes = {
+    children: PropTypes.object
+};
+
+export default BlueTheme;

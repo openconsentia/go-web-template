@@ -12,15 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
-
-import { Routes } from '../Routes';
-import {BlueTheme, applyTheme} from '../theme';
-
-const App = () => {
-    return (
-        <Routes />
-    );
-};
-
-export default applyTheme(BlueTheme, App);
+export { default as RedTheme } from './RedTheme';
+export { default as BlueTheme } from './BlueTheme';
+export { default as applyTheme } from './applyTheme';

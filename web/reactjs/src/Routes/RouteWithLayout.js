@@ -12,15 +12,32 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// React
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-import { Routes } from '../Routes';
-import {BlueTheme, applyTheme} from '../theme';
+// Others
+import PropTypes from 'prop-types';
 
-const App = () => {
+const RouteWithLayout = (props) => {
+    const { layout: Layout, component: Component, ...rest } = props;
+
     return (
-        <Routes />
+        <Route
+            {...rest}
+            render={matchProps => (
+                <Layout>
+                    <Component {...matchProps} />
+                </Layout>
+            )}
+        />
     );
 };
 
-export default applyTheme(BlueTheme, App);
+RouteWithLayout.propTypes = {
+    component: PropTypes.any.isRequired,
+    layout: PropTypes.any.isRequired,
+    path: PropTypes.string
+};
+
+export default RouteWithLayout;
