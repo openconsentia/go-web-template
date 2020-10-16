@@ -1,7 +1,7 @@
 {
   "name": "react-skeleton",
   "version": "0.0.1",
-  "description": "ReactJS Skeleton",
+  "description": "A skeleton react project",
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 3030 ./public",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulwizviz/go-web.git"
+    "url": "git+https://github.com/paulwizviz/reactjs-dashboard.git"
   },
   "keywords": [
     "React",
