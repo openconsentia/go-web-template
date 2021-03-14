@@ -12,6 +12,10 @@ Use this template to provision a new openconsentia project that requires a UI. T
 * Replace content of docs.
 * Replace copyright to embrace contributors to all Open Consentia projects.
 
+### v2.0
+
+* Update to using Go 1.16
+
 ## Copyrights
 
 Copyright 2020 The Open Consentia Contributors

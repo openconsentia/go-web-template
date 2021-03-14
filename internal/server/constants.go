@@ -15,7 +15,7 @@
 package server
 
 const (
-	URLRootPath = "/"
+	URLRootPath = "/reactjs"
 	URLAPIPath  = "/api"
 	URLAuthPath = "/api/auth"
 
